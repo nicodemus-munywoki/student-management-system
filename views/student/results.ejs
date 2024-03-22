@@ -1,0 +1,83 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center border-bottom">
+  <h1 class="display-6">Records</h1>
+  <div class="current-date-time"> <span id="liveDate"></span> | <span id="liveTime"></span> </span></div>
+  <div class="btn-toolbar mb-2 mb-md-0">
+	<div class="btn-group me-2">
+	  <a href="/add" class="btn btn-sm btn-outline-secondary">+ New student</a>
+	</div>
+  </div>
+</div>
+
+<div class="row mt-2 g-0 justify-content-center">
+		<div class="card text-center" style="width: 36rem">
+			<div class="card-body">
+				<form >
+					<div class="row">
+						<div class = "d-grid gap-2 col-auto mx-auto">
+						<select class="form-select mb-3" id="classSelect">
+						  <option value="">Select Class</option>
+						</select>
+						</div>
+						<div class = "d-grid gap-2 col-auto mx-auto">
+						  <select id="yearSelect" class="form-select mb-3">
+							<option value="">Select Year</option>
+						  </select>
+						</div>
+						<div class = "d-grid gap-2 col-auto mx-auto">
+							<select id="termSelect" class="form-select mb-3">
+							  <option value="">Select Term</option>
+							</select>
+						</div>
+					</div>
+				  <div class="row">
+					  <div class = "d-grid gap-2 col-auto mx-auto">
+						<button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+					  </div>
+				  </div>
+				</form>
+			</div>
+		</div>
+</div>
+
+<script>
+// Get the select element
+var yearSelect = document.getElementById("yearSelect");
+
+// Get the current year
+var currentYear = new Date().getFullYear();
+
+// Populate the select with years
+for (var year = currentYear; year >= currentYear - 100; year--) {
+  var option = document.createElement("option");
+  option.text = year;
+  option.value = year;
+  yearSelect.add(option);
+}
+	// Get the select element
+	var termSelect = document.getElementById("termSelect");
+
+	// Define the terms
+	var terms = ["Opener", "Midterm", "Endterm"];
+
+	// Populate the select with terms
+	terms.forEach(function(term) {
+	  var option = document.createElement("option");
+	  option.text = term;
+	  option.value = term.toLowerCase(); // Use lowercase value for consistency
+	  termSelect.add(option);
+	});
+	// Get the select element
+	var classSelect = document.getElementById("classSelect");
+
+	// Define the terms
+	var classes = ["Form 1", "Form 2", "Form 3", "Form 4"];
+
+	// Populate the select with terms
+	classes.forEach(function(cls) {
+	  var option = document.createElement("option");
+	  option.text = cls;
+	  option.value = cls.toLowerCase(); // Use lowercase value for consistency
+	  classSelect.add(option);
+	});
+
+</script>

@@ -1,0 +1,63 @@
+			<style>
+				body{
+					background-color: aquamarine;
+				}
+			</style>
+			<div class="container mt-5">
+				<div class="row justify-content-start ">
+					<div class="col-md-8">
+						<div class="card">
+							<% if (hasErrors) { %>
+								<div class="alert alert-danger p-0" id="error-alert">
+								  <% messages.forEach(element => { %>
+									<p><%= element %></p>
+								  <% }) %>
+
+								</div>
+								<script>
+								  // Add JavaScript to hide the alert after 2 seconds
+								  document.addEventListener('DOMContentLoaded', function () {
+									const errorAlert = document.getElementById('error-alert');
+									if (errorAlert) {
+									  setTimeout(function () {
+										errorAlert.style.display = 'none';
+									  }, 2000); // 2000 milliseconds = 2 seconds
+									}
+								  });
+								</script>
+							  <% } %>
+
+							<div class="card-header text-dark">
+								<h3 class="mb-0">Login to RemoWork</h3>
+							</div>
+							<div class="card-body">
+								<form action="/auth/login" method="POST">
+									<div class="mb-3">
+										<label for="username" class="form-label">Username</label>
+										<input type="text" class="form-control" id="username" name="username" required>
+									</div>
+									<div class="mb-3">
+										<label for="password" class="form-label">Password</label>
+										<input type="password" class="form-control" id="password" name="password" required>
+									</div>
+									<div class="mb-3 text-center">
+										<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+										<button type="submit" class="btn btn-success align-center">Login</button>
+									</div>
+									<div class="mb-3 text-center">
+										<p>Don't have an account? <a class=" align-center" href="/auth/signup">create one.</a></p>
+									</div>
+
+								</form>
+								<hr>
+								<div class="text-center">
+									<a href="#" class="btn btn-outline-secondary mb-2">Continue with Google</a><br>
+									<p>Or</p>
+									<a href="#" class="btn btn-outline-primary mb-2">Continue with Facebook</a><br>
+									<a href="#" class="btn btn-link">Forgot Password?</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>

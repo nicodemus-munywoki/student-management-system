@@ -1,0 +1,17 @@
+.me-img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #ecf
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.timetable-table th, .timetable-table td {
+  width: 100px; /* Set width to create square cells */
+  height: 100px; /* Set height to match width */
+  border: 1px solid black;
+  text-align: center;
+}

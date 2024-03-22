@@ -1,0 +1,253 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center border-bottom">
+  <h1 class="display-6">Dashboard</h1>
+  <div class="current-date-time"> <span id="liveDate"></span> | <span id="liveTime"></span> </span></div>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group me-2">
+      <a href="/add" class="btn btn-sm btn-outline-secondary">+ New student</a>
+    </div>
+  </div>
+</div>
+
+<div class = "container m-0">
+	<div class="row row-cols-1 row-cols-md-4 g-2 mb-3">
+	  <div class="col-auto">
+		  <div class="card border-primary">
+			  <div class="card-body">
+				  <div class="row">
+					  <div class="col-md-3">
+						<i class="bi bi-toggles2 fs-2"></i></div>
+					  <div class="col-md-9 text-start">
+					  <div class="row"><b class="p-0">56</b></div>
+					  <div class="row"><b class="p-0">Enrolled</b></div>
+					</div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="col-auto ">
+		  <div class="card border-warning">
+			  <div class="card-body">
+			  <div class="row">
+				  <div class="col-md-3"><i class="bi bi-people fs-2"></i></div>
+				  <div class="col-md-9 text-start">
+				  <div class="row"><b class="p-0">45</b></div>
+				  <div class="row"><b class="p-0">Employee</b></div>
+				  </div>
+			  </div>
+			  </div>
+		  </div>
+		  </a>
+	  </div>
+	  <div class="col-auto">
+		  <div class="card border-success">
+			  <div class="card-body">
+			  <div class="row">
+				  <div class="col-md-3">
+				  <i class="bi bi-view-list fs-2"></i>
+				  </div>
+				  <div class="col-md-9 text-start">
+				  <div class="row"><b class="p-0">24</b></div>
+				  <div class="row"><b class="p-0">Active tenders</b></div>
+				  </div>
+			  </div>
+			  </div>
+		  </div>
+		  </a>
+	  </div>
+	  <div class="col-auto">
+		  <div class="card border-danger">
+			  
+			  <div class="card-body">
+			  <div class="row">
+			  <div class="col-md-3 text-end">
+				  <i class="bi bi-exclamation-lg fs-2"></i>
+			  </div>
+			  <div class="col-md-9 text-start">
+				  <div class="row"><b class="p-0">34</b></div>
+				  <div class="row"><b class="p-0">Pending</b></div>
+			  </div>
+			  </div>
+			  </div>
+		  </div>
+		  </a>
+	  </div>
+	</div>
+</div>
+<div class = "container">
+	<div class="row row-cols-1 row-cols-md-3 mb-3">
+	  <div class="col d-flex">
+		<div class="card border-0 w-100 d-flex flex-column">
+		  <div class="card-header">Students whatch list</div>
+		  <div class="card-body d-flex flex-grow-0">
+			  <table class="table">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+					<th scope="col">Handle</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td colspan="2">Larry the Bird</td>
+					<td>@twitter</td>
+				  </tr>
+				</tbody>
+			  </table>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col d-flex">
+		<div class="card border-0 w-100 d-flex flex-column">
+		  <div class="card-header">Male to female ratio</div>
+		  <div class="card-body d-flex flex-grow-0">
+			<canvas id="genderChart" width="200" height="200"></canvas>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col d-flex">
+		<div class="card border-0 w-100 d-flex flex-column">
+		  <div class="card-header">Count by Gender</div>
+		  <div class="card-body d-flex flex-grow-1">
+			<canvas id="facts"></canvas>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+<table class="table timetable-table">
+	<thead>
+	  <tr>
+		<th></th>
+		<th scope="col">8:00 AM - 9.00 AM</th>
+		<th scope="col">9.00 AM - 10.00 AM</th>
+		<th scope="col">10.00 AM - 11:00 AM</th>
+		<th scope="col">11:00 AM - 12:00 AM</th>
+		<th scope="col">12:00 AM - 1:00 PM</th>
+		<th scope="col">1:00 PM - 2:00 PM</th>
+		<th scope="col">2:00 PM - 3:00 PM</th>
+		<th scope="col">3:00 PM - 4:00 PM</th>
+		<th scope="col">4:00 PM - 5:00 PM</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<th scope="row">Monday</th>
+		<td>Lesson 1</td>
+		<td>Lesson 2</td>
+		<td>Break</td>
+		<td>Lesson 3</td>
+		<td>Lesson 4</td>
+		<td>Lunch</td>
+		<td>Lesson 5</td>
+		<td>Lesson 6</td>
+		<td>Games</td>
+	  </tr>
+	  <tr>
+		<th scope="row">Tuesday</th>
+		  <td>Lesson 1</td>
+		  <td>Lesson 2</td>
+		  <td>Break</td>
+		  <td>Lesson 3</td>
+		  <td>Lesson 4</td>
+		  <td>Lunch</td>
+		  <td>Lesson 5</td>
+		  <td>Lesson 6</td>
+		  <td>Games</td>
+	  </tr>
+	  <tr>
+		<th scope="row">Wednesday</th>
+		  <td>Lesson 1</td>
+		  <td>Lesson 2</td>
+		  <td>Break</td>
+		  <td>Lesson 3</td>
+		  <td>Lesson 4</td>
+		  <td>Lunch</td>
+		  <td>Lesson 5</td>
+		  <td>Lesson 6</td>
+		  <td>Games</td>
+	  </tr>
+	  <tr>
+		<th scope="row">Thursday</th>
+		  <td>Lesson 1</td>
+		  <td>Lesson 2</td>
+		  <td>Break</td>
+		  <td>Lesson 3</td>
+		  <td>Lesson 4</td>
+		  <td>Lunch</td>
+		  <td>Lesson 5</td>
+		  <td>Lesson 6</td>
+		  <td>Games</td>
+	  </tr>
+	  <tr>
+		<th scope="row">Friday</th>
+		  <td>Lesson 1</td>
+		  <td>Lesson 2</td>
+		  <td>Break</td>
+		  <td>Lesson 3</td>
+		  <td>Lesson 4</td>
+		  <td>Lunch</td>
+		  <td>Lesson 5</td>
+		  <td>Lesson 6</td>
+		  <td>Games</td>
+	  </tr>
+	</tbody>
+  </table>
+
+
+<script>
+	let ctx = document.getElementById('genderChart').getContext('2d');
+	new Chart (ctx, {
+		type: 'doughnut',
+		data: {
+			labels: ['Male', 'Female'],
+			datasets: [{
+				data:[1000,1230],
+				background:[],
+				hoverOffset: 8,
+				borderWidth: 2
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+		}
+	});
+	let ctxF = document.getElementById('facts');
+	new Chart(ctxF, {
+		type: 'bar',
+		data: {
+		  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+		  datasets: [{
+			label: '# of Votes',
+			data: [12, 19, 3, 5, 2, 3],
+			borderWidth: 1
+		  }]
+		},
+		options: {
+		  scales: {
+			y: {
+			  beginAtZero: true
+			}
+		  }
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+		}
+	  });
+</script>
