@@ -1,12 +1,22 @@
 const express = require('express');
 const router = express.Router();
+const csurf = require('csurf');
 const indexController = require('../controllers/indexController');
 const userController = require('../controllers/userControllers');
 
-// Define the isLogedIn function
+var csurfProtection = csurf();
+router.use(csurfProtection);
+
+// Middleware to check if user is logged in
 function isLogedIn(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();
+	}
+	// Handle case where req.session is not defined
+	if (!req.session) {
+		// Log the error or handle it as appropriate
+		console.error("Session is not defined");
+		return res.redirect('/');
 	}
 	req.session.oldUrl = req.url;
 	res.redirect('/auth/login');

@@ -52,6 +52,12 @@
 					Settings
 				</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/logout">
+					<i class="bi bi-box-arrow-right"></i>
+					Logout
+				</a>
+			</li>
 		</ul>
 	</div>
 	<!-- User Information -->
@@ -64,10 +70,10 @@
 				</div>
 				<div class="col-md-10">
 					<div class="card-body m-0">
-						<h5 class = "p-0 m-0">John Doe</h5>
-						<h6 class = "p-0 m-0" style = "font-size: 9px">admin@admin.com</h6>
+						<h5 class = "p-0 m-0"><%= user.fname + ' ' + user.sname %></h5>
+						<h6 class = "p-0 m-0" style = "font-size: 9px"><%= user.email %></h6>
 						<p class="m-0 p-0">
-						superAdmin
+							<%= user.role %>
 						</p>
 					</div>
 				</div>
